@@ -30,7 +30,7 @@ botonFinalizar.setAttribute("class", "boton");
 //Boton de pago.
 botonFinalizar.onclick = () => {
   const precioFinal = montoTotalCompra.innerText;
-  //Estetica 
+  
   Swal.fire({
     title: '¿Deseas finalizar tu compra?',
     text: `Total a pagar: $${precioFinal}`,
@@ -52,7 +52,7 @@ botonFinalizar.onclick = () => {
 }
 
 
-//Seccion de cartas
+
 for (const Articulo of articulos) {
   let container = document.createElement("div");
   container.setAttribute("class", "cardArticulos");
@@ -65,13 +65,11 @@ for (const Articulo of articulos) {
                             <button class="boton" id="btn${Articulo.id}"> Agregar al carrito </button>
                             </div>`;
   sectionArticulos.appendChild(container);
-  //Evento para que los articulos se agreguen al carrito al hacer click en el boton
   document.getElementById(`btn${Articulo.id}`).onclick = () => agregarAlCarrito(`${Articulo.id}`);
 }
 
 
 
-//Funciones
 function agregarAlCarrito(id) {
   carrito.push(articulos.find(p => p.id == id));
   localStorage.setItem("carrito", JSON.stringify(carrito));
