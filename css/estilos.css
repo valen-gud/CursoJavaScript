@@ -53,18 +53,23 @@ main{
     
 }
 #section-articulos {
+    padding-bottom: 50px;
     width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-end;
+    .cardArticulos {
+        background-color: #d2c8a9;
+        border-radius: 20px;
+        width: 40%;
+        height: 450px;
+        margin: 20px;
+        text-align: center;
+    }
 }
 
-.cardArticulos {
-    width: 40%;
-    margin: 20px;
-    text-align: center;
-}
+
 
 .font {
     font-size: 15px;
@@ -120,6 +125,7 @@ main{
     position: sticky;
     top: 10px;
     color: var(--color-blanco);
+    box-shadow: 2px 2px 5px #383837;
 }
 
 #section-carrito div {
