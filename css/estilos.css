@@ -47,6 +47,7 @@ main{
     flex-direction: row;
 }
 .tituloh2{
+    margin: 50px;
     text-align: center;
     color: var(--color-fuente);
     
